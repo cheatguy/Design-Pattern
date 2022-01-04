@@ -1,0 +1,11 @@
+Linux 发展的五大支柱
+    Unix ,Minix,POSIX,GNU,Internet
+Linux 的发行版 
+   RedHat,Debian,Ubuntu
+   常见的嵌入式Linux系统
+        RT-Linux ,uCLinux(支持没有MMU)
+Linux 版本的发展
+    内核版本 - 稳定版 开发版 
+    主版本号 次版本号 修订版本号 
+Linux主机开发环境搭建
+    
