@@ -8,4 +8,75 @@ Linux 版本的发展
     内核版本 - 稳定版 开发版 
     主版本号 次版本号 修订版本号 
 Linux主机开发环境搭建
-    
+    安装方式 : 虚拟机 u盘启动 
+Linux 基本命令
+    用户系统相关
+        su  adduser passwd userdel usermod groupadd groupdel 
+        ps kill fdisk 
+    文件目录相关
+        ls pwd cd mkdir rmdir file touch cp rm mv find car 
+        more less head
+    压缩打包相关
+        打包是将文件或者目录变成一个总的文件,压缩是将一个大的文件变成一个小的文件
+        tar cf myfile.tar   file/
+        tar czf myfile.tar.gz file/    c建立归档 z进行压缩 f指定归档的文件名 
+        tar tf myfile.tar      查看归档文件目录列表
+        tar tzf myfile.tar.gz   查看压缩归档文件
+        tar xf mufile.tar 恢复归档
+        tar xzf myfile.tar.gz  恢复压缩归档
+        tar xf mufile.tar 恢复归档
+        tar xzf myfile.tar.gz -C restore/ 恢复压缩归档 to specific dir
+    比较合并文件相关
+        diff patch 
+    网络相关
+        ifconfig ping telnet ftp
+Linux软件的安装
+    dpkg,RPM
+Linux开发过程和使用到的工具
+    编辑 -> 编译 ->链接 ->运行 -> 调试
+    vi ,gcc  ,ld , GDB 
+vi下的三种工作模式
+    编辑模式i 命令模式esc 最后行模式:
+vi的基本操作命令
+    :wq :wq! :set nu 
+GCC处理编译流程和文件类型
+    GCC编译流程
+        预处理 编译 汇编 链接 (加载/重定位) 
+    文件类型
+        .so 动态库文件 .h 头文件 .i 已经预处理号的C源代码文件
+        .o 编译后的目标文件 .s 汇编语音源代码文件
+GCC编译常用选项
+    -o file   将GCC处理后的文件存为file
+    -S 把文件转化为汇编代码.s文件
+    -c 生成.o的目标文件,不进行链接
+    -g 产生调试信息
+    -O 优化
+GDB工具的基本命令和用法
+    b 设置断点 ,具体 的看PPT
+Makefile程序和Makefile文件
+    自动编译所有的内核代码文件,使用make工具程序,必须编写一个makefile的文件
+    包含一些执行规则和要求执行的命令
+Makefilee包含的5个东西
+    显式规则 隐式规则 变量的定义 文件的指示 注释
+Makefile的主要规则
+    Format:
+        target:先决条件
+        Tab  command:
+    eg):
+        helloworld:hello.o main.o
+            gcc hello.o main.o -o helloworld
+        main.o :main.c main.h 
+            gcc -c main.c main.h
+        hello.o :hello.c 
+            gcc -c hello.c 
+        PHONY:clean
+        clean:
+            rm -rf *o helloworld
+Make的工作原理
+
+Makefile中的语法
+    常用变量:cc g++
+    自动变量:
+    自动生成依赖性 
+    伪目标: 不是一个输出文件,是一个标签
+        
