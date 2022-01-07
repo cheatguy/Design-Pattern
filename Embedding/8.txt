@@ -1,0 +1,18 @@
+文件系统设计目标
+    对文件存储器的存储空间进行组织,分配和回收.进行文件的]存储,共享,和保护
+常见的文件系统
+    Local:
+        FAT,EXT2,JFFS2,YAFFS
+    Net:
+        Samba,NFS
+    基于4K块的大小 XFS ,Btrfs使用了B-tree
+虚拟文件系统 
+NOR NAND闪存的特点
+    FLASH主要依靠存储电荷保存数据
+    NOR 独立地址线 数据线,快速随机访问 存储少量可执行代码 SRAM接口,实现随机读写
+基于FLASH的文件系统
+    NAND 地址线数据线公用,适合高密度存储 速度块 
+    jffs2 用于NOR闪存,基于MTD驱动
+    yaffs 为NAND设计的日志
+基于RAM的文件系统
+    

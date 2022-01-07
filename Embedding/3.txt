@@ -1,3 +1,4 @@
+*
 Linux 发展的五大支柱
     Unix ,Minix,POSIX,GNU,Internet
 Linux 的发行版 
