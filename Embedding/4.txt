@@ -1,3 +1,4 @@
+*
 GUN ARM 汇编基础
     汇编语句格式 
         {label} instruction/directive(伪操作)/pseudo-instruction
